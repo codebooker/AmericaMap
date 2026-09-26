@@ -1,7 +1,7 @@
 {
-  "name": "FloridaMap",
-  "short_name": "FloridaMap",
-  "description": "A live statewide Florida operations map for traffic cameras, incidents, radar, aircraft, power outages, message signs, sensors, and emergency activity.",
+  "name": "AmericaMap",
+  "short_name": "AmericaMap",
+  "description": "Live traffic, emergencies, wildfires, outages, plate readers, aircraft, radar, and road weather — expanding state by state.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

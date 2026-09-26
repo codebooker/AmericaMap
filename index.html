@@ -3,47 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FloridaMap</title>
-  <meta name="description" content="FloridaMap is a live statewide Florida operations map for traffic cameras, message signs, incidents, weather radar, aircraft, power outages, sensors, plate readers, and emergency activity." />
+  <title>AmericaMap · Live U.S. Operations Map</title>
+  <meta name="description" content="AmericaMap combines live traffic cameras, incidents, construction, DeFlock plate readers, emergency feeds, power outages, radar, aircraft, and road sensors across the United States." />
   <meta name="theme-color" content="#0d1117" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="application-name" content="FloridaMap" />
+  <meta name="application-name" content="AmericaMap" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="FloridaMap" />
+  <meta name="apple-mobile-web-app-title" content="AmericaMap" />
   <meta name="mobile-web-app-capable" content="yes" />
-  <link rel="canonical" href="https://floridamap.app/" />
-  <link rel="icon" href="/floridamap-logo.svg" type="image/svg+xml" />
+  <link rel="icon" href="/americamap-logo.svg" type="image/svg+xml" />
   <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://americamap.app/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="FloridaMap" />
+  <meta property="og:site_name" content="AmericaMap" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="FloridaMap" />
-  <meta property="og:description" content="Live Florida traffic cameras, incidents, radar, aircraft, power outages, signs, sensors, plate readers, and emergency activity." />
-  <meta property="og:url" content="https://floridamap.app/" />
-  <meta property="og:image" content="https://floridamap.app/floridamap-social-card.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="FloridaMap — live statewide Florida operations map with cameras, incidents, radar, aircraft, and power outages" />
-  <meta property="og:image" content="https://floridamap.app/floridamap-social-square.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1200" />
-  <meta property="og:image:alt" content="FloridaMap — live statewide Florida operations map" />
+  <meta property="og:title" content="AmericaMap · Live U.S. Operations Map" />
+  <meta property="og:description" content="Live U.S. traffic, emergencies, outages, plate readers, radar, aircraft, and road conditions." />
+  <meta property="og:url" content="https://americamap.app/" />
+  <meta property="og:image" content="https://americamap.app/icon-512.png" />
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="FloridaMap" />
-  <meta name="twitter:description" content="Live Florida traffic cameras, incidents, radar, aircraft, power outages, signs, sensors, plate readers, and emergency activity." />
-  <meta name="twitter:image" content="https://floridamap.app/floridamap-social-card.png" />
-  <meta name="twitter:image:alt" content="FloridaMap — live statewide Florida operations map with cameras, incidents, radar, aircraft, and power outages" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AmericaMap · Live U.S. Operations Map" />
+  <meta name="twitter:description" content="Live U.S. traffic, emergencies, outages, plate readers, radar, aircraft, and road conditions." />
+  <meta name="twitter:image" content="https://americamap.app/icon-512.png" />
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" integrity="sha384-uTttxo/aOKbdE5RlD/SPzSDoDmNvGlUYPjONi2MN/b7c9HPSvW07OIuyP7uL6jxK" crossorigin="anonymous" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@tomickigrzegorz/leaflet-rotate@0.2.3/dist/leaflet-rotate.umd.min.js" integrity="sha384-aAuQmIbpDVGfPzFaoX7TnIl0HaM9ykaudDU6gKXDWc3SfsEzrRT5tGs7L41+W76h" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js" integrity="sha384-5+cfbwT0iiub6VsQAdn6yz16nr6sDiQoHx6tm4O8OVYXHYOxcffFmCJBL0dgdvGp" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js" integrity="sha384-tXYNKOHx4T02jMP7YYCtBxPIv1B5gaA5mcVPBzqMp6d7VzWzxJgI2aWF/nJLrQdS" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@1.6.16/dist/hls.min.js" integrity="sha384-5E8B0pTlZZJMabWpC0fyYf6OUpe15jJij34BqBAh4NXoHAlLNOjCPRrwtOXOQFAn" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/shaka-player@5.2.4/dist/shaka-player.compiled.js" integrity="sha384-O4226uONWlHcrMIoHGZlOarH7Jke6li3vA2RSC3I2IFxo48kxuILPYBZhKxQnkQY" crossorigin="anonymous"></script>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -213,7 +208,6 @@
     .layer-btn.active.lpr  { border-color: #a371f7; color: #a371f7; background: #1a1030; }
     .layer-btn.active.temp { border-color: #ff9d4d; color: #ff9d4d; background: #2a1800; }
     .lpr-wrap { position:relative; width:40px; height:40px; pointer-events:none; }
-    .lpr-dot  { position:absolute; top:15px; left:15px; width:10px; height:10px; border-radius:50%; border:2px solid #fff; box-shadow:0 1px 4px rgba(0,0,0,0.8); pointer-events:all; }
     .sens-marker { border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;border:1px solid rgba(255,255,255,0.35);box-shadow:0 1px 4px rgba(0,0,0,0.7);letter-spacing:-0.3px; }
     .temp-marker { border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;border:1.5px solid rgba(255,255,255,0.45);box-shadow:0 1px 5px rgba(0,0,0,0.7);letter-spacing:-0.2px;padding:0 3px;min-width:28px;height:18px; }
     .emer-marker { width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;border:2px solid rgba(255,255,255,0.4);box-shadow:0 0 6px rgba(0,0,0,0.6); }
@@ -241,6 +235,143 @@
       transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
     }
     .overview-hint strong { color: #58a6ff; }
+    .zoom-level-control {
+      min-width: 42px;
+      padding: 5px 7px 6px;
+      color: #e6edf3;
+      background: rgba(13,17,23,0.94);
+      border: 1px solid rgba(88,166,255,0.42);
+      border-radius: 6px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.38);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+      text-align: center;
+      pointer-events: none;
+    }
+    .zoom-level-control span {
+      display: block;
+      margin-bottom: 2px;
+      color: #8b949e;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .zoom-level-control strong {
+      color: #7ee3ff;
+      font-size: 14px;
+      font-weight: 750;
+    }
+    .three-d-status-control {
+      display: none;
+      width: 68px;
+      min-height: 38px;
+      padding: 6px 8px;
+      border: 1px solid rgba(88,166,255,0.34);
+      border-radius: 14px;
+      background: rgba(13,17,23,0.92);
+      color: #8b949e;
+      font: 800 16px/1 system-ui, sans-serif;
+      line-height: 1.2;
+      letter-spacing: 0.08em;
+      text-align: center;
+      text-transform: uppercase;
+      box-shadow: 0 7px 20px rgba(0,0,0,0.30);
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+    }
+    .three-d-status-control.visible { display: block; }
+    .three-d-status-control.loading { color: #c9d1d9; }
+    .three-d-status-control:hover,
+    .three-d-status-control:focus-visible {
+      border-color: rgba(126,227,255,0.82);
+      color: #c9d1d9;
+      outline: none;
+    }
+    .three-d-status-control.active {
+      border-color: rgba(126,227,255,0.58);
+      color: #7ee3ff;
+      background: rgba(13,31,51,0.94);
+      box-shadow: 0 0 0 1px rgba(88,166,255,0.08), 0 7px 22px rgba(0,0,0,0.34);
+    }
+    .three-d-status-control span {
+      display: block;
+      margin-top: 2px;
+      color: #8b949e;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .three-d-bearing-control {
+      display: none;
+      width: 68px;
+      height: 68px;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    .three-d-bearing-control.visible { display: block; }
+    .three-d-bearing-control .compass-face {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 68px;
+      height: 68px;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid rgba(126,227,255,0.46);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 43%, rgba(35,46,58,0.98) 0 48%, rgba(13,17,23,0.98) 72%),
+        #0d1117;
+      color: #c9d1d9;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.44), inset 0 0 0 2px rgba(255,255,255,0.025);
+      backdrop-filter: blur(9px);
+      cursor: grab;
+      touch-action: none;
+    }
+    .three-d-bearing-control .compass-face:hover,
+    .three-d-bearing-control .compass-face:focus-visible {
+      border-color: rgba(126,227,255,0.92);
+      box-shadow: 0 0 0 2px rgba(88,166,255,0.16), 0 8px 24px rgba(0,0,0,0.46);
+      outline: none;
+    }
+    .three-d-bearing-control .compass-face.dragging { cursor: grabbing; }
+    .three-d-bearing-control svg {
+      display: block;
+      width: 62px;
+      height: 62px;
+      overflow: visible;
+    }
+    .three-d-bearing-control .compass-ring {
+      fill: none;
+      stroke: rgba(201,209,217,0.20);
+      stroke-width: 1.2;
+    }
+    .three-d-bearing-control .compass-turn {
+      fill: none;
+      stroke: rgba(201,209,217,0.76);
+      stroke-linecap: round;
+      stroke-width: 3.6;
+    }
+    .three-d-bearing-control .compass-turn-tip { fill: rgba(201,209,217,0.82); }
+    .three-d-bearing-control .compass-rose {
+      transform-origin: 32px 32px;
+      transition: transform 90ms linear;
+    }
+    .three-d-bearing-control .compass-face.dragging .compass-rose { transition: none; }
+    .three-d-bearing-control .compass-north { fill: #f85149; }
+    .three-d-bearing-control .compass-south { fill: #d8dee4; }
+    .three-d-bearing-control .compass-center {
+      fill: #161b22;
+      stroke: rgba(255,255,255,0.26);
+      stroke-width: 1;
+    }
+    .three-d-bearing-control .compass-n-label {
+      fill: #ff7b72;
+      font: 800 7px/1 system-ui, sans-serif;
+      text-anchor: middle;
+    }
     .overview-hint.startup-hint {
       border-radius: 999px;
       padding: 10px 18px;
@@ -700,13 +831,35 @@
       min-width: 0;
       position: relative;
       overflow: hidden;
-      background: #262626;
+      background: #020408;
     }
+    #map-3d,
     #map {
       position: absolute;
       inset: 0;
+    }
+    #map-3d {
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      background: #020408;
+      transition: opacity 0.28s ease;
+    }
+    #map {
       z-index: 1;
-      background: #262626;
+      background: #020408;
+      transition: background-color 0.28s ease;
+    }
+    #map-shell.three-d-active #map-3d { opacity: 1; }
+    #map-shell.three-d-active #map { background: transparent; }
+    #map-shell.three-d-active .americamap-two-d-basemap,
+    #map-shell.three-d-active .americamap-two-d-flow,
+    #map-shell.three-d-active .leaflet-radar-pane,
+    #map-shell.three-d-active .leaflet-radar-pane-pane {
+      opacity: 0 !important;
+    }
+    #map-shell.three-d-active .leaflet-control-attribution {
+      background: rgba(13,17,23,0.88) !important;
     }
     #map-loading {
       position: absolute;
@@ -1450,11 +1603,11 @@
 <body>
 
 <header>
-  <div id="brand" aria-label="FloridaMap">
-    <img id="brand-mark" src="/floridamap-logo.svg" alt="FloridaMap logo" />
+  <div id="brand" aria-label="AmericaMap">
+    <img id="brand-mark" src="/americamap-logo.svg" alt="AmericaMap logo" />
     <div id="brand-copy">
-      <div id="brand-wordmark">FloridaMap</div>
-      <div id="brand-domain">floridamap.app</div>
+      <div id="brand-wordmark">AmericaMap</div>
+      <div id="brand-domain">americamap.app</div>
     </div>
   </div>
 
@@ -1471,25 +1624,25 @@
       <button class="layer-btn sign active" data-layer="sign" title="Highway message signs">
         <span class="dot" style="background:#e3b341"></span> Signs
       </button>
-      <button class="layer-btn inc active" data-layer="inc" title="Incidents, disabled vehicles, and live emergency calls">
+      <button class="layer-btn inc active" data-layer="inc" title="Traffic incidents, emergency calls, wildfires, and weather alerts">
         <span class="dot" style="background:#f85149"></span> Incidents
       </button>
       <button class="layer-btn con active" data-layer="con" title="Construction zones">
         <span class="dot" style="background:#d29922"></span> Construction
       </button>
-      <button class="layer-btn flow active" data-layer="flow" title="Live traffic flow">
+      <button class="layer-btn flow active" data-layer="flow" title="Live traffic flow; animated traffic is added automatically in 3D mode at zoom 15+">
         <span class="dot" style="background:#f85149"></span> Traffic Flows
       </button>
       <button class="layer-btn radar active" data-layer="radar" title="RainViewer weather radar with NOAA fallback">
         <span class="dot" style="background:#7ee3ff"></span> Weather Radar
       </button>
-      <button class="layer-btn power active" data-layer="power" title="Utility power outages">
+      <button class="layer-btn power" data-layer="power" title="Live utility outages">
         <span class="dot" style="background:#f778ba"></span> Power Outages
       </button>
-      <button class="layer-btn lpr active" data-layer="lpr" title="License plate readers (Flock Safety)">
+      <button class="layer-btn lpr active" data-layer="lpr" title="Community-mapped license plate readers from DeFlock and OpenStreetMap">
         <span class="dot" style="background:#a371f7"></span> Plate Readers
       </button>
-      <button class="layer-btn sens active" data-layer="sens" title="FDOT speed sensors">
+      <button class="layer-btn sens active" data-layer="sens" title="Live roadway speed and road-weather sensors">
         <span class="dot" style="background:#58a6ff"></span> Sensors
       </button>
       <button class="layer-btn temp active" data-layer="temp" title="Live air temperature at ASOS weather stations">
@@ -1510,7 +1663,7 @@
   <div id="feed-panel">
     <div id="feed-header">
       <div id="feed-title">On-Screen Activity</div>
-      <div id="feed-subtitle">Incidents, emergency callouts, visible power outages, and active sign messages in the current map view. Sorted by time when available.</div>
+      <div id="feed-subtitle">Traffic, emergency calls, wildfires, weather alerts, outages, and active signs in the current view.</div>
     </div>
     <div id="feed-list"></div>
   </div>
@@ -1519,11 +1672,11 @@
     <span id="feed-panel-toggle-label">Expand The Activity Panel<br>To View On-Screen Activity.</span>
   </button>
   <div id="map-shell">
-    <div id="map"></div>
+    <div id="map"><div id="map-3d" aria-hidden="true"></div></div>
     <div id="map-loading" aria-live="polite">
       <div class="map-loading-card">
         <div class="map-loading-line"></div>
-        <div class="map-loading-title">Bringing FloridaMap Online...</div>
+        <div class="map-loading-title">Bringing The Map Online</div>
       </div>
     </div>
     <div id="live-status">
@@ -1539,7 +1692,7 @@
     <div id="camera-hop-hud" aria-live="polite"></div>
 
     <!-- GitHub link -->
-    <a id="github-link" href="https://github.com/codebooker/floridamap" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
+    <a id="github-link" href="https://github.com/codebooker/AmericaMap" target="_blank" rel="noopener noreferrer" aria-label="View AmericaMap source on GitHub">
       <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
       GitHub
     </a>
@@ -1595,12 +1748,12 @@
               <path d="M 14 14 L 7.92 2.51 A 13 13 0 0 1 20.08 2.51 Z" fill="#e53935" fill-opacity="0.85"/>
             </svg>
           </div>
-          <span>Flock Safety Camera</span>
+          <span>Plate Reader (DeFlock / OSM)</span>
         </label>
         <label class="key-row">
           <input type="checkbox" class="key-cb" checked data-layer="sens">
-          <div class="key-icon"><div class="key-rect" style="background:rgba(88,166,255,0.85)">55</div></div>
-          <span>Traffic Sensor (speed mph)</span>
+          <div class="key-icon"><div class="key-rect" style="background:rgba(35,136,255,0.9)">82°</div></div>
+          <span>Road Weather Sensor</span>
         </label>
 
         <div class="key-section-label">Incidents</div>
@@ -1660,7 +1813,7 @@
         <label class="key-row">
           <input type="checkbox" class="key-cb" checked data-layer="flow">
           <div class="key-icon"><div class="key-swatch" style="background:linear-gradient(90deg,#0a4f1a,#1a8f2e,#58a6ff)"></div></div>
-          <span>Traffic Flow (speed)</span>
+          <span>Traffic Flow <small style="color:#8b949e">+ cars in 3D</small></span>
         </label>
         <label class="key-row">
           <input type="checkbox" class="key-cb" checked data-layer="radar">
@@ -1668,7 +1821,7 @@
           <span>Weather Radar</span>
         </label>
         <label class="key-row">
-          <input type="checkbox" class="key-cb" checked data-layer="power">
+          <input type="checkbox" class="key-cb" data-layer="power">
           <div class="key-icon"><div class="key-swatch" style="background:linear-gradient(135deg,#1a0a2e,#f778ba,#ff2d55)"></div></div>
           <span>Power Outages</span>
         </label>
